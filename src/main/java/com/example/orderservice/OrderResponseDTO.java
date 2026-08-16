@@ -5,8 +5,8 @@ import lombok.Data;
 @Data
 public class OrderResponseDTO {
     private Long orderId;
-    private Object user;
-    private Object product;
+    private UserDTO user;
+    private ProductDTO product;
     
 	public Long getOrderId() {
 		return orderId;
@@ -14,17 +14,18 @@ public class OrderResponseDTO {
 	public void setOrderId(Long orderId) {
 		this.orderId = orderId;
 	}
-	public Object getUser() {
+	public UserDTO getUser() {
 		return user;
 	}
-	public void setUser(Object user) {
+	public void setUser(UserDTO user) {
 		this.user = user;
 	}
-	public Object getProduct() {
+	public ProductDTO getProduct() {
 		return product;
 	}
-	public void setProduct(Object product) {
+	public void setProduct(ProductDTO product) {
 		this.product = product;
 	}
+    
     
 }

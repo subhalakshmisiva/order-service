@@ -19,11 +19,11 @@ public class OrderController {
 
         // Fetch user from User Service (port 8081)
         String userServiceUrl = "http://localhost:8081/users/" + userId;
-        Object user = restTemplate.getForObject(userServiceUrl, Object.class);
+        UserDTO user = restTemplate.getForObject(userServiceUrl, UserDTO.class);
 
         // Fetch product from Product Service (port 8082)
         String productServiceUrl = "http://localhost:8082/products/" + productId;
-        Object product = restTemplate.getForObject(productServiceUrl, Object.class);
+        ProductDTO product = restTemplate.getForObject(productServiceUrl, ProductDTO.class);
 
         // Aggregate response
         OrderResponseDTO response = new OrderResponseDTO();
